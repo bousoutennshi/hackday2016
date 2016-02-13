@@ -1,0 +1,165 @@
+/* 
+Eric Meyer's CSS Reset
+http://meyerweb.com/eric/tools/css/reset/
+v1.0 | 20080212
+CSSresetr.com
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+ 
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+ 
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+ 
+/* tables still need 'cellspacing=0' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*ここからスタイル*/
+body {
+  background: #000;
+}
+
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.screen {
+  width: 100%;
+  position: relative;
+  float: left;
+  width: 60%;
+  margin: auto 5%;
+}
+
+.screen p {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  /*position: absolute;*/
+  text-align: center;
+}
+
+.screen .person {
+ padding-top: 60px;
+ margin: 0 auto;
+ text-align: center;
+}
+
+.screen .fire1 {
+  background: url(img/fire1.gif)  no-repeat center 90%;
+}
+
+.screen .fire2 {
+  background: url(img/fire2.gif)  no-repeat center 90%;
+}
+
+.screen .fire3 {
+  background: url(img/fire3.gif)  no-repeat center bottom;
+}
+
+.screen .fire4 {
+  background: url(img/fire4.gif)  no-repeat center bottom;
+  -webkit-background-size: 100% 100%;
+       -o-background-size: 100% 100%;
+          background-size: 100% 100%;
+}
+
+.screen .person img {
+    opacity: 0.8;
+}
+
+.screen .fire {
+  margin: -200px auto;
+  text-align: center;
+  /*  position: absolute;
+    top: 50%;*/
+}
+
+.screen .level {
+  color: #FFF;
+  font-size: 36px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+.screen .name {
+  margin: 24px auto;
+  color: #FFF;
+  font-size: 32px;
+  text-align: center;
+  font-style: italic;
+}
+
+.sidebar {
+  float: right;
+  width: 30%;
+  background: #333;
+  height: 800px; /*一応*/
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sidebar h1{
+  background: #121212;
+  color: #FFF;
+  padding: 20px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.name_wrap {
+ margin: 0 auto;
+ position: relative;
+}
+
+.talent-name {
+ text-align: center;
+ padding-top: 21%;
+ color: #FFF;
+ font-size: 104px;
+ font-style: italic;
+}
