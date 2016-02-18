@@ -3,7 +3,7 @@
 // DB情報
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'fire');
-define('DB_USER', 'root');
+define('DB_USER', '');
 define('DB_PASSWORD', '');
 
 // 文字化け対策
@@ -28,13 +28,14 @@ $stmt->execute($bind);
 $data = array();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     // 炎上レベル操作
-    $data['level'] = getFireLevel(intval($row['score']));
+    #$data['level'] = getFireLevel(intval($row['score']));
     #$data['level'] = "3";
     #$data['level'] = "2";
     #$data['level'] = "1";
     #$data['level'] = "0";
     // 点火モード
     #$data['level'] = "4";
+    $data['level'] = strval(rand(0,3));
     break;
 }
 

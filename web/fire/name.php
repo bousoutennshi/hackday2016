@@ -1,4 +1,8 @@
 <?php
+
+// 基本0
+$number = 0;
+
 $url = "http://210.140.101.90/demo.php";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -17,7 +21,7 @@ $data = json_decode($json,true);
 </head>
 <body>
 <div class="name_wrap">
-    <p class="talent-name"><?php echo $data[0]['name']; ?></p>
+    <p class="talent-name"><?php echo $data[$number]['name']; ?></p>
 </div><!-- .wrap -->
 </body>
 </html>

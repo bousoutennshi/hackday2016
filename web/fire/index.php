@@ -1,5 +1,8 @@
 <?php
 
+// 基本0
+$number = 0;
+
 $url = "http://210.140.101.90/demo.php";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -8,7 +11,7 @@ $json = curl_exec($ch);
 curl_close($ch);
 $data = json_decode($json,true);
 
-switch ($data[0]['level']) {
+switch ($data[$number]['level']) {
     case "0":
         $level = '炎上レベル 0';
         $class = 'fire1';
@@ -38,13 +41,18 @@ switch ($data[0]['level']) {
     <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
     <title>Fire</title>
     <link rel="stylesheet" href="style.css" />
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+        setTimeout("location.reload()",60000);
+    //-->
+    </SCRIPT>
 </head>
 <body>
     <div class="wrap">
     <section class="screen">
-        <p class="<?php echo $class; ?>"><img src="<?php echo $data[0]['image']; ?>" width="100%"  alt=""></p>
+        <p class="<?php echo $class; ?>"><img src="<?php echo $data[$number]['image']; ?>" width="100%"  alt=""></p>
         <p class="level"><?php echo $level; ?></p>
-        <p class="name"><?php echo $data[0]['name']; ?></p>
+        <p class="name"><?php echo $data[$number]['name']; ?></p>
     </section>
     <section class="sidebar">
         <div>
